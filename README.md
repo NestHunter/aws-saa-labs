@@ -26,16 +26,21 @@ This repository may include:
 
 As I continue progressing through the AWS Solutions Architect path, this repo will grow to include areas such as:
 
-- Amazon S3
-- IAM
-- EC2
-- VPC
-- Route 53
-- RDS
-- Elastic Load Balancing
-- Auto Scaling
-- CloudWatch
-- Storage, networking, and security best practices
+- Amazon S3  
+- IAM  
+- EC2  
+- VPC  
+- Route 53  
+- RDS  
+- Elastic Load Balancing  
+- Auto Scaling  
+- CloudWatch  
+- Storage, networking, and security best practices  
+
+## Featured Lab Notes
+
+- [Troubleshooting an Application Load Balancer and CloudFormation stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
+  Short write-up of a skills assessment where I diagnosed why a web application was not loading through an ALB and fixed issues with the Auto Scaling Group attachment, subnet placement, and security group rules.
 
 ## Why I’m Building This Publicly
 
@@ -47,10 +52,10 @@ This repo shows how I think, how I learn, and how I break down AWS concepts into
 
 My approach is simple:
 
-- Learn the concept
-- Build or document something from it
-- Capture what matters
-- Revisit and improve over time
+- Learn the concept  
+- Build or document something from it  
+- Capture what matters  
+- Revisit and improve over time  
 
 The focus here is not perfection — it’s consistency, clarity, and progress.
 
@@ -58,12 +63,7 @@ The focus here is not perfection — it’s consistency, clarity, and progress.
 
 This repository supports my path toward becoming a Cloud Security Engineer by helping me build stronger AWS fundamentals, document my hands-on learning, and create a public body of work I can continue building on.
 
-## Featured Lab Notes
-
-- [Troubleshooting an Application Load Balancer and CloudFormation stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
-  Diagnosed why a web application was not loading through an Application Load Balancer by fixing Auto Scaling Group association, subnet placement, and security group rules.
-
 ## Related Repositories
 
-- `cloud-security-portfolio` – central portfolio hub
+- `cloud-security-portfolio` – central portfolio hub  
 - Future project repos tied to AWS architecture, Terraform, and cloud security labs
