@@ -58,6 +58,11 @@ The focus here is not perfection — it’s consistency, clarity, and progress.
 
 This repository supports my path toward becoming a Cloud Security Engineer by helping me build stronger AWS fundamentals, document my hands-on learning, and create a public body of work I can continue building on.
 
+## Featured Lab Notes
+
+- [Troubleshooting an Application Load Balancer and CloudFormation stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
+  Diagnosed why a web application was not loading through an Application Load Balancer by fixing Auto Scaling Group association, subnet placement, and security group rules.
+
 ## Related Repositories
 
 - `cloud-security-portfolio` – central portfolio hub
