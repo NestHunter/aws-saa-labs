@@ -31,6 +31,9 @@ This repository may include:
 - [Enabling Outbound Internet Access from a Private Subnet with a NAT Gateway](./labs/private-subnet-nat-gateway.md)  
   Hands-on lab configuring a NAT Gateway, route tables, and security groups to give a private EC2 instance outbound internet access while keeping it unreachable from the public internet.
 
+- [Network Evaluation Challenge — VPC Troubleshooting Skills Assessment](./labs/network-evaluation-challenge.md)  
+  Skills assessment diagnosing a broken VPC environment: identifying an inaccessible EC2 instance, correcting an overly restrictive security group, and fixing a missing private subnet route to the NAT Gateway. Covers why assigning a public IP is a workaround rather than a proper design, and what the correct production architecture looks like.
+
 ### Troubleshooting
 
 - [Troubleshooting an Application Load Balancer and CloudFormation Stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
@@ -45,6 +48,8 @@ This repository may include:
 | VPC — subnets, route tables, Internet Gateway | Documented |
 | NAT Gateway — private subnet outbound access | Documented |
 | Security groups — stateful rules, SG-to-SG referencing | Documented |
+| EC2 accessibility — key pairs, Instance Connect, management paths | Documented |
+| VPC troubleshooting — multi-layer diagnosis | Documented |
 | Application Load Balancer — troubleshooting | Documented |
 | Amazon S3 | Coming soon |
 | IAM | Coming soon |
