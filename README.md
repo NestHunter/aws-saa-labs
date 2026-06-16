@@ -8,9 +8,9 @@ This repository is a collection of labs, notes, small builds, and hands-on exerc
 
 The goal of this repo is to turn study time into visible proof of progress.
 
-Instead of only consuming AWS course material, I’m using this space to document what I’m learning, capture key takeaways, and build hands-on familiarity with AWS services in a practical way.
+Instead of only consuming AWS course material, I'm using this space to document what I'm learning, capture key takeaways, and build hands-on familiarity with AWS services in a practical way.
 
-## What You’ll Find Here
+## What You'll Find Here
 
 This repository may include:
 
@@ -39,10 +39,17 @@ As I continue progressing through the AWS Solutions Architect path, this repo wi
 
 ## Featured Lab Notes
 
+### Networking & VPC
+
+- [Enabling Outbound Internet Access from a Private Subnet with a NAT Gateway](./labs/private-subnet-nat-gateway.md)  
+  Hands-on lab configuring a NAT Gateway, route tables, and security groups to give a private EC2 instance outbound internet access while keeping it unreachable from the public internet.
+
+### Troubleshooting
+
 - [Troubleshooting an Application Load Balancer and CloudFormation stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
   Short write-up of a skills assessment where I diagnosed why a web application was not loading through an ALB and fixed issues with the Auto Scaling Group attachment, subnet placement, and security group rules.
 
-## Why I’m Building This Publicly
+## Why I'm Building This Publicly
 
 I want my GitHub to reflect more than just completed projects.
 
@@ -57,7 +64,7 @@ My approach is simple:
 - Capture what matters  
 - Revisit and improve over time  
 
-The focus here is not perfection — it’s consistency, clarity, and progress.
+The focus here is not perfection — it's consistency, clarity, and progress.
 
 ## Long-Term Goal
 
