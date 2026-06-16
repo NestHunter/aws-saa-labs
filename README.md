@@ -22,22 +22,9 @@ This repository may include:
 - Security considerations tied to each topic
 - Lessons learned from implementation
 
-## Topics Covered
+---
 
-As I continue progressing through the AWS Solutions Architect path, this repo will grow to include areas such as:
-
-- Amazon S3  
-- IAM  
-- EC2  
-- VPC  
-- Route 53  
-- RDS  
-- Elastic Load Balancing  
-- Auto Scaling  
-- CloudWatch  
-- Storage, networking, and security best practices  
-
-## Featured Lab Notes
+## Lab Notes
 
 ### Networking & VPC
 
@@ -46,8 +33,29 @@ As I continue progressing through the AWS Solutions Architect path, this repo wi
 
 ### Troubleshooting
 
-- [Troubleshooting an Application Load Balancer and CloudFormation stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
-  Short write-up of a skills assessment where I diagnosed why a web application was not loading through an ALB and fixed issues with the Auto Scaling Group attachment, subnet placement, and security group rules.
+- [Troubleshooting an Application Load Balancer and CloudFormation Stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
+  Diagnosing why a web application wasn't loading through an ALB and fixing issues with Auto Scaling Group attachment, subnet placement, and security group rules.
+
+---
+
+## Topics Covered
+
+| Topic | Status |
+|---|---|
+| VPC — subnets, route tables, Internet Gateway | Documented |
+| NAT Gateway — private subnet outbound access | Documented |
+| Security groups — stateful rules, SG-to-SG referencing | Documented |
+| Application Load Balancer — troubleshooting | Documented |
+| Amazon S3 | Coming soon |
+| IAM | Coming soon |
+| EC2 | Coming soon |
+| Route 53 | Coming soon |
+| RDS | Coming soon |
+| Elastic Load Balancing — configuration | Coming soon |
+| Auto Scaling | Coming soon |
+| CloudWatch | Coming soon |
+
+---
 
 ## Why I'm Building This Publicly
 
@@ -72,5 +80,5 @@ This repository supports my path toward becoming a Cloud Security Engineer by he
 
 ## Related Repositories
 
-- `cloud-security-portfolio` – central portfolio hub  
+- [cloud-security-portfolio](https://github.com/NestHunter/cloud-security-portfolio) — central portfolio hub  
 - Future project repos tied to AWS architecture, Terraform, and cloud security labs
