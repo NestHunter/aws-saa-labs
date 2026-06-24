@@ -28,17 +28,17 @@ This repository may include:
 
 ### Networking & VPC
 
-- [Enabling Outbound Internet Access from a Private Subnet with a NAT Gateway](./labs/private-subnet-nat-gateway.md)  
+- [Enabling Outbound Internet Access from a Private Subnet with a NAT Gateway](./labs/private-subnet-nat-gateway/README.md)  
   Hands-on lab configuring a NAT Gateway, route tables, and security groups to give a private EC2 instance outbound internet access while keeping it unreachable from the public internet.
 
-- [Network Evaluation Challenge — VPC Troubleshooting Skills Assessment](./labs/network-evaluation-challenge.md)  
+- [Network Evaluation Challenge — VPC Troubleshooting Skills Assessment](./labs/network-evaluation-challenge/README.md)  
   Skills assessment diagnosing a broken VPC environment: identifying an inaccessible EC2 instance, correcting an overly restrictive security group, and fixing a missing private subnet route to the NAT Gateway. Covers why assigning a public IP is a workaround rather than a proper design, and what the correct production architecture looks like.
 
 ### Storage
 
-- [Amazon EBS Volumes](./ebs-volume-lab/README.md)  
+- [Amazon EBS Volumes](./labs/ebs-volume-lab/README.md)  
   Hands-on lab covering the full EBS lifecycle: creating and attaching a 10 GB gp2 volume, formatting and mounting it on Linux, persisting the mount via `/etc/fstab`, taking a snapshot, and restoring it to a second instance in a different Availability Zone. Demonstrates that EBS volumes are AZ-scoped and that snapshots are the standard way to move data between AZs.  
-  → [Step-by-step walkthrough](./ebs-volume-lab/amazon-ebs-volumes.md)
+  → [Step-by-step walkthrough](./labs/ebs-volume-lab/amazon-ebs-volumes.md)
 
 ### Troubleshooting
 
