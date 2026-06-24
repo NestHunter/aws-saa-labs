@@ -34,6 +34,12 @@ This repository may include:
 - [Network Evaluation Challenge — VPC Troubleshooting Skills Assessment](./labs/network-evaluation-challenge.md)  
   Skills assessment diagnosing a broken VPC environment: identifying an inaccessible EC2 instance, correcting an overly restrictive security group, and fixing a missing private subnet route to the NAT Gateway. Covers why assigning a public IP is a workaround rather than a proper design, and what the correct production architecture looks like.
 
+### Storage
+
+- [Amazon EBS Volumes](./ebs-volume-lab/README.md)  
+  Hands-on lab covering the full EBS lifecycle: creating and attaching a 10 GB gp2 volume, formatting and mounting it on Linux, persisting the mount via `/etc/fstab`, taking a snapshot, and restoring it to a second instance in a different Availability Zone. Demonstrates that EBS volumes are AZ-scoped and that snapshots are the standard way to move data between AZs.  
+  → [Step-by-step walkthrough](./ebs-volume-lab/amazon-ebs-volumes.md)
+
 ### Troubleshooting
 
 - [Troubleshooting an Application Load Balancer and CloudFormation Stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
@@ -51,6 +57,8 @@ This repository may include:
 | EC2 accessibility — key pairs, Instance Connect, management paths | Documented |
 | VPC troubleshooting — multi-layer diagnosis | Documented |
 | Application Load Balancer — troubleshooting | Documented |
+| EBS volumes — create, attach, format, mount, fstab | Documented |
+| EBS snapshots — cross-AZ data movement | Documented |
 | Amazon S3 | Coming soon |
 | IAM | Coming soon |
 | EC2 | Coming soon |
