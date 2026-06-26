@@ -34,6 +34,12 @@ This repository may include:
 - [Network Evaluation Challenge — VPC Troubleshooting Skills Assessment](./labs/network-evaluation-challenge/README.md)  
   Skills assessment diagnosing a broken VPC environment: identifying an inaccessible EC2 instance, correcting an overly restrictive security group, and fixing a missing private subnet route to the NAT Gateway. Covers why assigning a public IP is a workaround rather than a proper design, and what the correct production architecture looks like.
 
+### Serverless & Compute
+
+- [Connect a Lambda Function to a VPC](./labs/connect-lambda-to-vpc/README.md)  
+  Hands-on lab deploying a Python Lambda function inside a VPC to call a private EC2 web server and upload the response to S3. Covers VPC attachment, NAT Gateway requirements, ENI-based IAM permissions, IMDSv2 user data, and the full Lambda → EC2 → S3 workflow.  
+  → [Step-by-step walkthrough](./labs/connect-lambda-to-vpc/connect-lambda-to-vpc.md)
+
 ### Storage
 
 - [Amazon EBS Volumes](./labs/ebs-volume-lab/README.md)  
@@ -59,9 +65,11 @@ This repository may include:
 | Application Load Balancer — troubleshooting | Documented |
 | EBS volumes — create, attach, format, mount, fstab | Documented |
 | EBS snapshots — cross-AZ data movement | Documented |
-| Amazon S3 | Coming soon |
-| IAM | Coming soon |
-| EC2 | Coming soon |
+| Lambda — VPC attachment and ENI networking | Documented |
+| Lambda — S3 integration via boto3 | Documented |
+| EC2 user data and IMDSv2 | Documented |
+| Amazon S3 — object storage concepts | Coming soon |
+| IAM — roles, policies, and permissions | Coming soon |
 | Route 53 | Coming soon |
 | RDS | Coming soon |
 | Elastic Load Balancing — configuration | Coming soon |
