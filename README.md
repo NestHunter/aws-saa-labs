@@ -40,6 +40,9 @@ This repository may include:
   Hands-on lab deploying a Python Lambda function inside a VPC to call a private EC2 web server and upload the response to S3. Covers VPC attachment, NAT Gateway requirements, ENI-based IAM permissions, IMDSv2 user data, and the full Lambda → EC2 → S3 workflow.  
   → [Step-by-step walkthrough](./labs/connect-lambda-to-vpc/connect-lambda-to-vpc.md)
 
+- [Fix an API Gateway GET Method Using Lambda Proxy Integration](./labs/api-gateway-lambda-proxy-fix/README.md)  
+  Troubleshooting lab resolving a broken API Gateway integration after a Swagger import. Covers identifying a misconfigured GET method, recreating it with Lambda proxy integration mapped to `helloWorldFunction`, redeploying to the `prod` stage, and validating the fix through API testing.
+
 ### Storage
 
 - [Amazon EBS Volumes](./labs/ebs-volume-lab/README.md)  
@@ -68,6 +71,7 @@ This repository may include:
 | Lambda — VPC attachment and ENI networking | Documented |
 | Lambda — S3 integration via boto3 | Documented |
 | EC2 user data and IMDSv2 | Documented |
+| API Gateway — REST API, Lambda proxy integration, Swagger import | Documented |
 | Amazon S3 — object storage concepts | Coming soon |
 | IAM — roles, policies, and permissions | Coming soon |
 | Route 53 | Coming soon |
