@@ -43,6 +43,9 @@ This repository may include:
 - [Fix an API Gateway GET Method Using Lambda Proxy Integration](./labs/api-gateway-lambda-proxy-fix/README.md)  
   Troubleshooting lab resolving a broken API Gateway integration after a Swagger import. Covers identifying a misconfigured GET method, recreating it with Lambda proxy integration mapped to `helloWorldFunction`, redeploying to the `prod` stage, and validating the fix through API testing.
 
+- [Build a Serverless Web Application (S3, API Gateway, Lambda, SQS, DynamoDB)](./labs/serverless-web-application/README.md)  
+  End-to-end lab building a serverless e-commerce style application. A static S3-hosted frontend submits orders through API Gateway to a producer Lambda, which queues messages in SQS. A consumer Lambda processes the queue and persists records to DynamoDB. Covers event-driven architecture, Lambda proxy integration, SQS decoupling, IAM scoping, and incremental validation.
+
 ### Storage
 
 - [Amazon EBS Volumes](./labs/ebs-volume-lab/README.md)  
@@ -72,6 +75,10 @@ This repository may include:
 | Lambda — S3 integration via boto3 | Documented |
 | EC2 user data and IMDSv2 | Documented |
 | API Gateway — REST API, Lambda proxy integration, Swagger import | Documented |
+| S3 — static website hosting and bucket policies | Documented |
+| SQS — event-driven decoupling and Lambda triggers | Documented |
+| Lambda — SQS consumer and DynamoDB integration | Documented |
+| End-to-end serverless application architecture | Documented |
 | Amazon S3 — object storage concepts | Coming soon |
 | IAM — roles, policies, and permissions | Coming soon |
 | Route 53 | Coming soon |
