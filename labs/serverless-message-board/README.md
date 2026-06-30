@@ -150,4 +150,3 @@ These are real issues encountered during this lab — not edge cases, but things
 
 ---
 
-*Part of the [CyberNest AWS Labs Portfolio](https://github.com/deandre-wilson) — hands-on cloud projects built while pursuing the AWS Solutions Architect Associate certification.*
