@@ -1,8 +1,8 @@
-# AWS SAA Labs
+# AWS Labs
 
-Welcome to my AWS Solutions Architect Associate lab repository.
+Hands-on AWS lab work — built in public as I go.
 
-This repository is a collection of labs, notes, small builds, and hands-on exercises created while studying for the AWS Certified Solutions Architect – Associate certification and building my broader cloud security skill set.
+This repository is a collection of labs, architecture builds, troubleshooting write-ups, and hands-on exercises spanning the full AWS learning path. It started with SAA-C03 prep and will grow into cloud security, infrastructure, and real-world architecture patterns over time.
 
 ## Purpose
 
