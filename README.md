@@ -44,7 +44,10 @@ This repository may include:
   Troubleshooting lab resolving a broken API Gateway integration after a Swagger import. Covers identifying a misconfigured GET method, recreating it with Lambda proxy integration mapped to `helloWorldFunction`, redeploying to the `prod` stage, and validating the fix through API testing.
 
 - [Build a Serverless Web Application (S3, API Gateway, Lambda, SQS, DynamoDB)](./labs/serverless-web-application/README.md)  
-  End-to-end lab building a serverless e-commerce style application. A static S3-hosted frontend submits orders through API Gateway to a producer Lambda, which queues messages in SQS. A consumer Lambda processes the queue and persists records to DynamoDB. Covers event-driven architecture, Lambda proxy integration, SQS decoupling, IAM scoping, and incremental validation.
+  End-to-end lab building a serverless e-commerce style application. A static S3-hosted frontend submits orders through API Gateway to a producer Lambda, which queues messages in SQS. A consumer Lambda processes the queue and persists records to DynamoDB. Covers event-driven architecture, Lambda proxy integration, SQS decoupling, IAM scoping, and incremental validation. *See also: `serverless-message-board` for a simpler direct build without the SQS async layer.*
+
+- [Serverless Message Board (S3, API Gateway, Lambda, DynamoDB)](./labs/serverless-message-board/README.md)  
+  Working end-to-end serverless message board. Browser submits and retrieves messages via a static S3 frontend calling API Gateway, which invokes Lambda (Python/boto3) to read and write DynamoDB. Covers CORS configuration, IAM least-privilege, and real troubleshooting: double-path routing bug, preflight failures, missing PutItem/Scan permissions, and DynamoDB key case mismatch. *See also: `serverless-web-application` for a more complex build that adds SQS async decoupling.*
 
 ### Storage
 
@@ -54,7 +57,7 @@ This repository may include:
 
 ### Troubleshooting
 
-- [Troubleshooting an Application Load Balancer and CloudFormation Stack](./troubleshooting/alb-cloudformation-troubleshooting.md)  
+- [Troubleshooting an Application Load Balancer and CloudFormation Stack](./troubleshooting/alb-cloudformation-troubleshooting/README.md)  
   Diagnosing why a web application wasn't loading through an ALB and fixing issues with Auto Scaling Group attachment, subnet placement, and security group rules.
 
 ---
@@ -79,12 +82,14 @@ This repository may include:
 | SQS — event-driven decoupling and Lambda triggers | Documented |
 | Lambda — SQS consumer and DynamoDB integration | Documented |
 | End-to-end serverless application architecture | Documented |
+| Serverless direct integration (API GW + Lambda + DynamoDB) | Documented |
+| CORS configuration for REST APIs | Documented |
 | Amazon S3 — object storage concepts | Coming soon |
 | IAM — roles, policies, and permissions | Coming soon |
 | Route 53 | Coming soon |
 | RDS | Coming soon |
-| Elastic Load Balancing — configuration | Coming soon |
-| Auto Scaling | Coming soon |
+| Elastic Load Balancing — configuration | Partially covered (ALB troubleshooting) |
+| Auto Scaling | Partially covered (ALB/ASG troubleshooting) |
 | CloudWatch | Coming soon |
 
 ---

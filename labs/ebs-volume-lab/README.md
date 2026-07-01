@@ -64,5 +64,5 @@ The detailed step-by-step walkthrough is in [amazon-ebs-volumes.md](./amazon-ebs
 
 ## Related Lab Notes
 
-- [Enabling Outbound Internet Access from a Private Subnet with a NAT Gateway](../labs/private-subnet-nat-gateway.md)
-- [Network Evaluation Challenge — VPC Troubleshooting Skills Assessment](../labs/network-evaluation-challenge.md)
+- [Enabling Outbound Internet Access from a Private Subnet with a NAT Gateway](../private-subnet-nat-gateway/README.md)
+- [Network Evaluation Challenge — VPC Troubleshooting Skills Assessment](../network-evaluation-challenge/README.md)

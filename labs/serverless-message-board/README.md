@@ -142,6 +142,12 @@ These are real issues encountered during this lab — not edge cases, but things
 
 ---
 
+## Related Labs
+
+- [Build a Serverless Web Application](../serverless-web-application/README.md) — a more complex version of this pattern that adds SQS between Lambda and DynamoDB for asynchronous decoupling. If this lab is where the core API GW → Lambda → DynamoDB integration clicked, that one is the next step.
+
+---
+
 ## Notes
 
 - This project was built as a hands-on AWS lab as part of ongoing AWS Solutions Architect Associate preparation.

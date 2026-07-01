@@ -151,3 +151,9 @@ After the API and frontend were in place, the full application path was tested b
 | IAM scoping for serverless | Creating separate, least-privilege execution roles for each Lambda function based on what it needs to access |
 | Incremental validation | Testing the queue-to-database path in isolation before introducing the API and frontend layers |
 | End-to-end serverless architecture | Combining five AWS services into a cohesive, fully managed application with no server infrastructure to maintain |
+
+---
+
+## Related Labs
+
+- [Serverless Message Board](../serverless-message-board/README.md) — a simpler version of this pattern that connects API Gateway directly to Lambda and DynamoDB without an SQS queue. A good starting point if you want to understand the core API GW → Lambda → DynamoDB integration before adding async decoupling.
