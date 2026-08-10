@@ -6,6 +6,8 @@ This lab documents building a fully serverless e-commerce style web application 
 
 The architecture follows a classic event-driven serverless pattern: an HTTP request triggers a Lambda function, which decouples the work by placing a message onto an SQS queue, and a second Lambda function processes that message asynchronously and writes the result to DynamoDB. This separation of concerns between the producer and consumer is a foundational pattern in scalable cloud application design.
 
+> **Documentation note:** This lab was built and tested manually in the AWS Console. No project code files (Lambda handlers, frontend files) were retained in this repository — the build sequence, configuration, and validation below reflect exactly what was implemented. No credentials, account IDs, or endpoint URLs are included.
+
 ---
 
 ## Architecture

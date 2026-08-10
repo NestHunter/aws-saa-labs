@@ -2,6 +2,8 @@
 
 > A working end-to-end serverless web application built on AWS. Users submit and retrieve messages through a static frontend backed by API Gateway, Lambda, and DynamoDB.
 
+> **Documentation note:** This lab was built and tested manually in the AWS Console. No project code files were retained in this repository — the configuration steps, request flow, and troubleshooting below reflect exactly what was implemented. No credentials, account IDs, or endpoint URLs are included.
+
 ---
 
 ## What I Built
@@ -23,7 +25,7 @@ Amazon API Gateway  (/messages — GET, POST, OPTIONS)
         |
         | Invokes
         v
-AWS Lambda  (lambda_function.py — boto3)
+AWS Lambda  (Python / boto3)
         |
         | PutItem / Scan
         v
@@ -33,7 +35,7 @@ Amazon DynamoDB  (Messages table)
 > See `architecture.png` for a visual diagram.
 
 **Data flow:**
-1. Browser loads `index.html` from S3
+1. Browser loads the static frontend from S3
 2. JavaScript calls the API Gateway endpoint
 3. API Gateway proxies the request to Lambda
 4. Lambda reads or writes to DynamoDB
@@ -45,23 +47,11 @@ Amazon DynamoDB  (Messages table)
 
 | Service | Role |
 |---|---|
-| **Amazon S3** | Hosts the static frontend (`index.html`) with static website hosting enabled |
+| **Amazon S3** | Hosts the static frontend with static website hosting enabled |
 | **Amazon API Gateway** | Exposes the `/messages` REST endpoint; handles routing and CORS |
 | **AWS Lambda** | Backend logic — processes GET and POST requests using Python and `boto3` |
 | **Amazon DynamoDB** | NoSQL table that stores submitted messages; partition key: `messageId` |
 | **AWS IAM** | Lambda execution role with `dynamodb:PutItem` and `dynamodb:Scan` permissions |
-
----
-
-## Repository Structure
-
-```
-serverless-message-board/
-├── README.md               # This file
-├── index.html              # Static frontend hosted on S3
-├── lambda_function.py      # Lambda handler (Python / boto3)
-└── architecture.png        # Architecture diagram
-```
 
 ---
 
@@ -75,7 +65,7 @@ serverless-message-board/
 
 ### 2. Lambda
 - Create a function with the Python 3.x runtime
-- Paste the contents of `lambda_function.py` as the function code
+- Write the handler directly in the Lambda console's inline code editor: on `POST`, write the incoming message to the table with `put_item`; on `GET`, return all stored messages with `scan`
 - Attach an execution role with the following permissions:
   - `dynamodb:PutItem`
   - `dynamodb:Scan`
@@ -90,9 +80,9 @@ serverless-message-board/
 - Copy the **Invoke URL** — it ends at the stage name (e.g., `https://abc123.execute-api.us-east-1.amazonaws.com/prod`)
 
 ### 4. Frontend
-- In `index.html`, set `API_BASE_URL` to your stage URL (do **not** append `/messages` here — the JavaScript `fetch()` calls already append it)
+- In the static HTML page, set `API_BASE_URL` to your stage URL (do **not** append `/messages` here — the JavaScript `fetch()` call already appends it)
 - Create an S3 bucket with static website hosting enabled
-- Upload `index.html`
+- Upload the HTML page
 - Set the bucket policy to allow public read
 - Open the S3 website endpoint in your browser
 
@@ -104,7 +94,7 @@ These are real issues encountered during this lab — not edge cases, but things
 
 ### Double path: `/messages/messages`
 **Problem:** The API Gateway Invoke URL already contained `/messages` in the base URL, and the JavaScript `fetch()` call appended `/messages` again, resulting in a 404.  
-**Fix:** The correct base URL stops at the stage (e.g., `.../prod`). The path `/messages` is appended only once, in the `fetch()` call inside `index.html`.
+**Fix:** The correct base URL stops at the stage (e.g., `.../prod`). The path `/messages` is appended only once, in the `fetch()` call.
 
 ---
 
@@ -153,6 +143,3 @@ These are real issues encountered during this lab — not edge cases, but things
 - This project was built as a hands-on AWS lab as part of ongoing AWS Solutions Architect Associate preparation.
 - No IaC (Terraform, CloudFormation, CDK) was used — all resources were provisioned manually through the AWS Console.
 - The purpose was to understand the end-to-end integration of core serverless services, not to automate deployment.
-
----
-
