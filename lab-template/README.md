@@ -1,6 +1,6 @@
 # Lab: [Title — what you built or fixed]
 
-> One-sentence summary: what this lab is, what it demonstrates, and why it matters to the SAA path.
+> One-sentence summary: what this lab is, what it demonstrates, and why it matters to your AWS learning path.
 
 ---
 

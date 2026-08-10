@@ -2,7 +2,7 @@
 
 Hands-on AWS lab work — built in public as I go.
 
-This repository is a collection of labs, architecture builds, troubleshooting write-ups, and hands-on exercises spanning the full AWS learning path. It started with SAA-C03 prep and will grow into cloud security, infrastructure, and real-world architecture patterns over time.
+This repository is a collection of labs, architecture builds, troubleshooting write-ups, and hands-on exercises spanning the full AWS learning path. It started as SAA-C03 prep — I passed the exam in August 2026 — and is now growing into cloud security, infrastructure, and real-world architecture patterns as I work toward the AWS Certified Security – Specialty (SCS-C02).
 
 ## Purpose
 
